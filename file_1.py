@@ -2,18 +2,18 @@ import numpy
 import psycopg2
 import win32com.client
 
-# score = 51
-# if score >= 90:
-#     print('A')
-# elif score >= 80:
-#     print('B')
-# elif score >= 70:
-#     print('C')
-# elif score >= 60:
-#     print('D')
-# else:
-#     print('F')
-#
+score = 51
+if score >= 90:
+    print('A')
+elif score >= 80:
+    print('B')
+elif score >= 70:
+    print('C')
+elif score >= 60:
+    print('D')
+else:
+    print('F')
+
 def someMath(v1, v2, v3):
     # v1 = 1
     # v2 = 5
