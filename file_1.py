@@ -26,14 +26,14 @@ import win32com.client
 # prod = someMath(5, 5, 1)
 # print('proizvod je: '+ str(prod))
 
-# f_in = open('D:/KURSEVI/Udemy Python for Geospatial/python/addresses.txt','r')
-# f_out = open('D:/KURSEVI/Udemy Python for Geospatial/python/addresses.csv','w')
-#
-# for line in f_in:
-#     print(line)
-#     f_out.write(line + '\n')
-# f_in.close()
-# f_out.close()
+f_in = open('D:/KURSEVI/Udemy Python for Geospatial/python/addresses.txt','r')
+f_out = open('D:/KURSEVI/Udemy Python for Geospatial/python/addresses.csv','w')
+
+for line in f_in:
+    print(line)
+    f_out.write(line + '\n')
+f_in.close()
+f_out.close()
 
 conn = psycopg2.connect(dbname='richland', host='localhost', port='5432', user='postgres', password='start#01')
 
