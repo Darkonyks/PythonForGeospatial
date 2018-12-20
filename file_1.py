@@ -44,16 +44,16 @@ cur = conn.cursor()
 #              'FROM schools, tri92 ' \
 #              'WHERE st_distance (schools.geometry, tri92.geometry) < 5000'
 
-# getschools = " SELECT DISTINCT schools.\"NAME\", min(st_distance(schools.geometry, tri92.geometry)) AS dist " \
-#              " FROM schools, tri92 " \
-#              " WHERE st_dWithin(schools.geometry, tri92.geometry,5000) " \
-#              " GROUP BY schools.\"NAME\" ORDER BY dist "
+getschools = " SELECT DISTINCT schools.\"NAME\", min(st_distance(schools.geometry, tri92.geometry)) AS dist " \
+             " FROM schools, tri92 " \
+             " WHERE st_dWithin(schools.geometry, tri92.geometry,5000) " \
+             " GROUP BY schools.\"NAME\" ORDER BY dist "
 
-getschools = ' SELECT DISTINCT schools."NAME", st_distance (schools.geometry, tri92.geometry) as dist ' \
-             ' FROM schools, tri92 ' \
-             ' WHERE st_dWithin(schools.geometry, tri92.geometry, 5000) ' \
-             ' AND tri92."NAME" = \'+ "LINDAU CHEMICAL" +' \
-             ' ORDER BY dist ASC '
+# getschools = ' SELECT DISTINCT schools."NAME", st_distance (schools.geometry, tri92.geometry) as dist ' \
+#              ' FROM schools, tri92 ' \
+#              ' WHERE st_dWithin(schools.geometry, tri92.geometry, 5000) ' \
+#              ' AND tri92."NAME" = \'+ "LINDAU CHEMICAL" +' \
+#              ' ORDER BY dist ASC '
 
 cur.execute(getschools)
 thevals = cur.fetchall()
@@ -75,4 +75,3 @@ print(conf)
 
 avg = numpy.average(mydists)
 print(avg)
-fff
