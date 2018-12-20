@@ -35,6 +35,7 @@ for line in f_in:
 f_in.close()
 f_out.close()
 
+#konekcija ka bazi
 conn = psycopg2.connect(dbname='richland', host='localhost', port='5432', user='postgres', password='start#01')
 
 excel = win32com.client.Dispatch("Excel.Application")
