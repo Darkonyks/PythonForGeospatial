@@ -2,29 +2,29 @@ import numpy
 import psycopg2
 import win32com.client
 
-# score = 51
-# if score >= 90:
-#     print('A')
-# elif score >= 80:
-#     print('B')
-# elif score >= 70:
-#     print('C')
-# elif score >= 60:
-#     print('D')
-# else:
-#     print('F')
-#
-# def someMath(v1, v2, v3):
-#     # v1 = 1
-#     # v2 = 5
-#     add = v1 * v2 - v3
-#     subtract = v2 - v1
-#     print (v1)
-#     print(str(v1) + " + " + str(v2) + " = " + str(add))
-#     print(subtract)
-#     return add
-# prod = someMath(5, 5, 1)
-# print('proizvod je: '+ str(prod))
+score = 51
+if score >= 90:
+    print('A')
+elif score >= 80:
+    print('B')
+elif score >= 70:
+    print('C')
+elif score >= 60:
+    print('D')
+else:
+    print('F')
+
+def someMath(v1, v2, v3):
+    # v1 = 1
+    # v2 = 5
+    add = v1 * v2 - v3
+    subtract = v2 - v1
+    print (v1)
+    print(str(v1) + " + " + str(v2) + " = " + str(add))
+    print(subtract)
+    return add
+prod = someMath(5, 5, 1)
+print('proizvod je: '+ str(prod))
 
 # f_in = open('D:/KURSEVI/Udemy Python for Geospatial/python/addresses.txt','r')
 # f_out = open('D:/KURSEVI/Udemy Python for Geospatial/python/addresses.csv','w')
