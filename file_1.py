@@ -40,14 +40,14 @@ conn = psycopg2.connect(dbname='richland', host='localhost', port='5432', user='
 excel = win32com.client.Dispatch("Excel.Application")
 
 cur = conn.cursor()
-getschools = 'SELECT DISTINCT schools."NAME" ' \
-             'FROM schools, tri92 ' \
-             'WHERE st_distance (schools.geometry, tri92.geometry) < 5000'
+# getschools = 'SELECT DISTINCT schools."NAME" ' \
+#              'FROM schools, tri92 ' \
+#              'WHERE st_distance (schools.geometry, tri92.geometry) < 5000'
 
-# getschools = " SELECT DISTINCT schools.\"NAME\", min(st_distance(schools.geometry, tri92.geometry)) AS dist " \
-#              " FROM schools, tri92 " \
-#              " WHERE st_dWithin(schools.geometry, tri92.geometry,5000) " \
-#              " GROUP BY schools.\"NAME\" ORDER BY dist "
+getschools = " SELECT DISTINCT schools.\"NAME\", min(st_distance(schools.geometry, tri92.geometry)) AS dist " \
+             " FROM schools, tri92 " \
+             " WHERE st_dWithin(schools.geometry, tri92.geometry,5000) " \
+             " GROUP BY schools.\"NAME\" ORDER BY dist "
 
 # getschools = ' SELECT DISTINCT schools."NAME", st_distance (schools.geometry, tri92.geometry) as dist ' \
 #              ' FROM schools, tri92 ' \
