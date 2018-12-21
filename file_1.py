@@ -19,7 +19,7 @@ def someMath(v1, v2, v3):
     # v2 = 5
     add = v1 * v2 - v3
     subtract = v2 - v1
-    print (v1)
+    print(v1)
     print(str(v1) + " + " + str(v2) + " = " + str(add))
     print(subtract)
     return add
