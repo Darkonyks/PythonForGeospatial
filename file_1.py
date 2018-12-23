@@ -76,4 +76,3 @@ print(conf)
 
 avg = numpy.average(mydists)
 print(avg)
-samo testiram
