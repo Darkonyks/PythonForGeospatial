@@ -1,5 +1,6 @@
 import arcpy
 
+
 arcpy.env.workspace = "D:/KURSEVI/Udemy Python for Geospatial/python/RichlandData"
 arcpy.env.overwriteOutput = True
 tri = "tri92.shp"

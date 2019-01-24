@@ -76,3 +76,4 @@ print(conf)
 
 avg = numpy.average(mydists)
 print(avg)
+print(avg)
